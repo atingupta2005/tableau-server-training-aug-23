@@ -385,7 +385,7 @@ ssh username@hostname_or_ip-address
 
 Example:
 ssh john@192.0.0.22
-ssh john@test.remoteserver.com
+ssh atin@test.remoteserver.com
 ```
 
 ### Vi/Vim-commands
@@ -436,3 +436,22 @@ These commands places vi in entry mode from command mode. First, you need to be 
     :q!	    # Quit and throw away for any changes
     ```
 
+
+### Mount
+- On Linux and UNIX operating systems, you can use the mount command to attach (mount) file systems and removable devices such as USB flash drives at a particular mount point in the directory tree.
+
+#### How to List Mounted File Systems
+```
+mount
+```
+
+#### Mounting a File System
+```
+mount /dev/sda /support 
+```
+
+#### unmount
+
+```
+unmount /support 
+```

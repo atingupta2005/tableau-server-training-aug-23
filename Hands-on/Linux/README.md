@@ -1,4 +1,4 @@
-# Linux-cheat-sheet
+# Linux
 ### User Information
 
 1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
@@ -10,14 +10,14 @@
 
    ```bash
    $ who
-   sudheer :0 2019-08-04 01:21 (:0)
+   atin :0 2019-08-04 01:21 (:0)
    ```
 
 2. **whoami:** It display the system’s username
 
    ```bash
    $ whoami
-   sudheer
+   atin
    ```
 
 3. **id:** It display the user identification(the real and effective user and group IDs) information

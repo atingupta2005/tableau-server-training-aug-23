@@ -9,5 +9,4 @@ fi
 sudo chmod 600 /etc/smbcredentials/saatin6879393.cred
 
 sudo bash -c 'echo "//saatin6879393.file.core.windows.net/fscommon /mnt/fscommon cifs nofail,credentials=/etc/smbcredentials/saatin6879393.cred,dir_mode=0777,file_mode=0777,serverino,nosharesock,actimeo=30" >> /etc/fstab'
-
 sudo mount -t cifs //saatin6879393.file.core.windows.net/fscommon /mnt/fscommon -o credentials=/etc/smbcredentials/saatin6879393.cred,dir_mode=0777,file_mode=0777,serverino,nosharesock,actimeo=30

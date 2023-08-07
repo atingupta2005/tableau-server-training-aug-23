@@ -1,3 +1,15 @@
+$connectTestResult = Test-NetConnection -ComputerName saatin6879393.file.core.windows.net -Port 445
+if ($connectTestResult.TcpTestSucceeded) {
+    # Save the password so the drive will persist on reboot
+    cmd.exe /C "cmdkey /add:`"saatin6879393.file.core.windows.net`" /user:`"localhost\saatin6879393`" /pass:`"XtFLT/BAgeFTJnI+lLWdIeQpdXqap29sFWVPzGHrOXYX5LHNvgSVR/84Mia6VO26BNaA04ua+04x+ASt+wwcAw==`""
+    # Mount the drive
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\saatin6879393.file.core.windows.net\fscommon" -Persist
+} else {
+    Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
+}
+
+# --------------------------------------
+
 sudo mkdir /mnt/fscommon
 if [ ! -d "/etc/smbcredentials" ]; then
 sudo mkdir /etc/smbcredentials
